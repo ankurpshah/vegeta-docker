@@ -12,7 +12,7 @@ Docker image for the [Vegeta](https://github.com/tsenart/vegeta) HTTP load testi
 - [`6.5.0`, `6.5`  (*6.5/Dockerfile*)](https://github.com/ankurpshah/vegeta-docker/tree/v6.5.0)
 - [`6.4.0`, `6.4`  (*6.4/Dockerfile*)](https://github.com/ankurpshah/vegeta-docker/tree/v6.4.0)
 
-For earlier versions see [releases](https://github.com/ankurpshah/vegeta-docker/releases) and the available [tags on Docker Hub](https://hub.docker.com/r/ankurpshah/vegeta/tags/).
+For earlier versions see [releases](https://github.com/ankurpshah/vegeta-docker/releases) and the available [tags on Docker Hub](https://hub.docker.com/r/ankurpshah/vegeta/tags/)
 
 ## Usage
 
