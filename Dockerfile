@@ -1,12 +1,12 @@
-FROM alpine:3.10.1
+FROM alpine:3.10
 
 LABEL \
-  maintainer="Peter Evans <mail@peterevans.dev>" \
-  org.opencontainers.image.title="vegeta" \
+  maintainer="Ankur Shah <ankurpshah@gmail.com>" \
+  org.opencontainers.image.title="ankurpshah" \
   org.opencontainers.image.description="Docker image for the Vegeta HTTP load testing tool." \
-  org.opencontainers.image.authors="Peter Evans <mail@peterevans.dev>" \
-  org.opencontainers.image.url="https://github.com/peter-evans/vegeta-docker" \
-  org.opencontainers.image.vendor="https://peterevans.dev" \
+  org.opencontainers.image.authors="Ankur Shah <ankurpshah@gmail.com>" \
+  org.opencontainers.image.url="https://github.com/ankurpshah/vegeta-docker" \
+  org.opencontainers.image.vendor="https://ankurpshah.com" \
   org.opencontainers.image.licenses="MIT"
 
 ENV VEGETA_VERSION 12.8.0
@@ -19,6 +19,17 @@ RUN set -ex \
  && cd bin \
  && tar xzf /tmp/vegeta.tar.gz \
  && rm /tmp/vegeta.tar.gz \
- && apk del .build-deps
+ && apk del .build-deps 
+
+RUN apk -v --update add \
+        python \
+        py-pip \
+        groff \
+        less \
+        mailcap \
+        && \
+    pip install --upgrade awscli==1.14.5 s3cmd==2.0.1 python-magic && \
+    apk -v --purge del py-pip && \
+    rm /var/cache/apk/*
 
 CMD [ "/bin/vegeta", "-help" ]

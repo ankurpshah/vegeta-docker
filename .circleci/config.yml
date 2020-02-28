@@ -2,7 +2,7 @@ version: 2.1
 executors:
   docker-executor:
     environment:
-      IMAGE_NAME: peterevans/vegeta
+      IMAGE_NAME: ankurpshah/vegeta
     docker:
       - image: circleci/buildpack-deps:stretch
 jobs:
