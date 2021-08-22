@@ -1,4 +1,4 @@
-FROM alpine:3.10
+FROM alpine:latest
 
 LABEL \
   maintainer="Ankur Shah <ankurpshah@gmail.com>" \
