@@ -1,4 +1,4 @@
-FROM alpine:3.10
+FROM alpine:3.19.3
 
 LABEL \
   maintainer="Ankur Shah <ankurpshah@gmail.com>" \
